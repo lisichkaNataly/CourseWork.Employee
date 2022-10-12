@@ -1,24 +1,24 @@
 public class Employee {
-    private String FIO;
+    private String fullName;
     private int department;
     private int salary;
-    private static int Counter;
+    private static int counter;
     private int id;
 
 
-    public Employee (String fio, int department, int salary) {
-        this.FIO = fio;
+    public Employee (String fullName, int department, int salary) {
+        this.fullName = fullName;
         this.department = department;
         this.salary = salary;
-        this.id = ++Counter;
+        this.id = ++counter;
     }
 
     public int getId() {
         return this.id;
     }
 
-    public String getFIO() {
-        return this.FIO;
+    public String getFullName() {
+        return this.fullName;
     }
 
     public int getDepartment() {
@@ -29,9 +29,6 @@ public class Employee {
         return this.salary;
     }
 
-    public void setFIO(String FIO) {
-        this.FIO = FIO;
-    }
 
     public void setDepartment(int department) {
         this.department = department;
@@ -43,6 +40,7 @@ public class Employee {
 
     @Override
     public String toString() {
-        return " ID: " + id + " ФИО: " + FIO + " Отдел: " + department + " Зарплата: " + salary;
+        return " ID: " + id + " ФИО: " + fullName + " Отдел: " + department + " Зарплата: " + salary;
     }
+
 }
